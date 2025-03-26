@@ -1,11 +1,6 @@
 
 
-try:
-    import streamlit as st
-except ModuleNotFoundError:
-    print("Error: The 'streamlit' module is not installed. Please install it using 'pip install streamlit' and try again.")
-    exit()
-
+import streamlit as st
 from moviepy.editor import VideoFileClip
 import os
 import yt_dlp as youtube_dl
@@ -57,7 +52,7 @@ def zip_clips(clip_paths, zip_name):
     return zip_path
 
 # Streamlit UI
-st.title("Video Downloader & Splitter")
+st.title("Video Downloader & Splitter By Adnan Walayat")
 st.write("Enter a video URL (e.g., YouTube), and it will be downloaded and split into clips of specified duration.")
 
 video_url = st.text_input("Enter Video URL")
